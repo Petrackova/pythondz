@@ -15,10 +15,13 @@ max_weight = int(input())
 thing_dict = dict(zip(list_thing,list_weight))
 print(thing_dict)
 summ_thing = {}
+
 for key,value in thing_dict.items():
     if max_weight-value >= 0:
         summ_thing[key] = value
         max_weight -= value
+
 for key, value in summ_thing.items():
     print(key, ' : ', value)
+
 print(f'Поместилось всего {len(summ_thing)} вещи, весом {sum(summ_thing.values())} кг.')
